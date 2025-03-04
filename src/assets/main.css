@@ -1,0 +1,47 @@
+@import "./base.css";
+body {
+  background-color: rgb(255, 255, 255);
+}
+#app {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+}
+
+@media (max-width: 1024px) {
+  #app {
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #app {
+    .items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      transition: 0.3s;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  #app {
+    .items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      transition: 0.5s;
+    }
+  }
+}
