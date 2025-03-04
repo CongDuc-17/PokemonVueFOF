@@ -3,15 +3,17 @@ import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { watch } from "vue";
 
-const props = defineProps(["url"]);
+const props = defineProps(["name", "url"]);
 defineEmits(["select-pokemon"]);
 const router = useRouter();
+
 async function cFetch(URL) {
   const response = await fetch(URL);
   return await response.json();
 }
 const pokemon = ref({});
 const pokemon__desc = ref({});
+
 cFetch(props.url).then((data) => {
   pokemon.value = data;
 });
